@@ -1,6 +1,4 @@
-# project-hawkeye-vit
-project-hawkeye-vit created by GitHub Classroom
-----
+# Improving Owl-Vit using Registers
 
 ## Results
 
