@@ -2,6 +2,11 @@
 project-hawkeye-vit created by GitHub Classroom
 ----
 
+## Results
+
+![alt text](./results/image.png)
+![alt text](./results/image1.png)
+
 ### 1. **Model & Configuration**
 
 * `transformers/Owlv2ConfigWithRegisters.py`
