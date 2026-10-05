@@ -1,0 +1,17 @@
+# Install the bundled Transformers fork first (it provides the *WithRegisters classes):
+#   pip install -e ./transformers
+# The fork is 4.52.0.dev0 and pins torch>=2.1,<2.7 and tokenizers>=0.21,<0.22.
+
+torch>=2.1,<2.7
+torchvision
+accelerate
+datasets
+safetensors
+pycocotools
+scipy
+numpy
+pillow
+scikit-image
+matplotlib
+tqdm
+wandb

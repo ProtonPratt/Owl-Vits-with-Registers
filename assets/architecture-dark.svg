@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" role="img" aria-label="Register tokens are appended to the image tokens, pass through the ViT encoder, and are sliced off before the detection heads">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#656c76"/></marker></defs>
+<text x="40" y="26" font-size="13" font-weight="600" fill="#9198a1" letter-spacing="0.6">ENCODER INPUT</text>
+<g><rect x="40" y="44" width="58" height="42" rx="8" fill="#3a2d00" stroke="#d29922" stroke-width="1.5"/><text x="69.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">CLS</text></g>
+<g><rect x="106" y="44" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="135.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p₁</text></g>
+<g><rect x="172" y="44" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="201.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p₂</text></g>
+<g><rect x="238" y="44" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="267.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p₃</text></g>
+<text x="333.0" y="71.0" text-anchor="middle" font-size="20" fill="#9198a1">…</text>
+<g><rect x="370" y="44" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="399.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p<tspan baseline-shift="sub" font-size="10">N</tspan></text></g>
+<g><rect x="462" y="44" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5"/><text x="491.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₁</text></g>
+<g><rect x="528" y="44" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5"/><text x="557.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₂</text></g>
+<g><rect x="594" y="44" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5"/><text x="623.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₃</text></g>
+<g><rect x="660" y="44" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5"/><text x="689.0" y="70.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₄</text></g>
+<path d="M40 94 v6 H428 v-6" fill="none" stroke="#4493f8" stroke-width="1.4"/><text x="234.0" y="117" text-anchor="middle" font-size="12.5" fill="#9198a1">1 + N image tokens · pretrained embeddings</text>
+<path d="M462 94 v6 H718 v-6" fill="none" stroke="#ab7df8" stroke-width="1.4"/><text x="590.0" y="117" text-anchor="middle" font-size="12.5" fill="#9198a1">K = 4 registers · new, learnable</text>
+<line x1="234.0" y1="126" x2="234.0" y2="164" stroke="#656c76" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="590.0" y1="126" x2="590.0" y2="164" stroke="#656c76" stroke-width="1.6" marker-end="url(#ah)"/>
+<rect x="40" y="168" width="678" height="64" rx="12" fill="#151b23" stroke="#3d444d" stroke-width="1.5"/>
+<text x="379.0" y="196" text-anchor="middle" font-size="16" font-weight="600" fill="#f0f6fc">ViT image encoder (pretrained OWL-ViT / OWLv2 weights)</text>
+<text x="379.0" y="217" text-anchor="middle" font-size="13" fill="#9198a1">self-attention over all 1 + N + K tokens — registers give global computation somewhere to live</text>
+<line x1="234.0" y1="232" x2="234.0" y2="268" stroke="#656c76" stroke-width="1.6" marker-end="url(#ah)"/>
+<line x1="590.0" y1="232" x2="590.0" y2="268" stroke="#656c76" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="40" y="262" font-size="13" font-weight="600" fill="#9198a1" letter-spacing="0.6">ENCODER OUTPUT</text>
+<g><rect x="40" y="290" width="58" height="42" rx="8" fill="#3a2d00" stroke="#d29922" stroke-width="1.5"/><text x="69.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">CLS</text></g>
+<g><rect x="106" y="290" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="135.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p₁</text></g>
+<g><rect x="172" y="290" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="201.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p₂</text></g>
+<g><rect x="238" y="290" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="267.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p₃</text></g>
+<text x="333.0" y="317.0" text-anchor="middle" font-size="20" fill="#9198a1">…</text>
+<g><rect x="370" y="290" width="58" height="42" rx="8" fill="#0c2d6b" stroke="#4493f8" stroke-width="1.5"/><text x="399.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">p<tspan baseline-shift="sub" font-size="10">N</tspan></text></g>
+<g opacity="0.45"><rect x="462" y="290" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5" stroke-dasharray="5 4"/><text x="491.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₁</text></g>
+<g opacity="0.45"><rect x="528" y="290" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5" stroke-dasharray="5 4"/><text x="557.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₂</text></g>
+<g opacity="0.45"><rect x="594" y="290" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5" stroke-dasharray="5 4"/><text x="623.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₃</text></g>
+<g opacity="0.45"><rect x="660" y="290" width="58" height="42" rx="8" fill="#2a1a4a" stroke="#ab7df8" stroke-width="1.5" stroke-dasharray="5 4"/><text x="689.0" y="316.0" text-anchor="middle" font-size="14" font-weight="600" fill="#f0f6fc">r₄</text></g>
+<line x1="456" y1="311.0" x2="724" y2="311.0" stroke="#ab7df8" stroke-width="1.6"/>
+<text x="590.0" y="354" text-anchor="middle" font-size="12.5" fill="#9198a1">sliced off · never reach the heads</text>
+<line x1="234.0" y1="332" x2="234.0" y2="400" stroke="#656c76" stroke-width="1.6" marker-end="url(#ah)"/>
+<rect x="40" y="404" width="388" height="64" rx="12" fill="#0f2d1a" stroke="#3fb950" stroke-width="1.5"/>
+<text x="234.0" y="432" text-anchor="middle" font-size="16" font-weight="600" fill="#f0f6fc">Detection heads · one prediction per patch</text>
+<text x="234.0" y="453" text-anchor="middle" font-size="13" fill="#9198a1">class (similarity to text queries) · box · objectness</text>
+<rect x="482" y="404" width="236" height="64" rx="12" fill="#3d1e00" stroke="#f0883e" stroke-width="1.5"/>
+<text x="600.0" y="432" text-anchor="middle" font-size="15" font-weight="600" fill="#f0f6fc">Text encoder</text>
+<text x="600.0" y="453" text-anchor="middle" font-size="12.5" fill="#9198a1">“skier”, “donut”, …</text>
+<line x1="482" y1="436" x2="432" y2="436" stroke="#656c76" stroke-width="1.6" marker-end="url(#ah)"/>
+<text x="762" y="54" font-size="13" font-weight="600" fill="#f0f6fc">What changes</text>
+<text x="762" y="78" font-size="12.5" fill="#9198a1">+ K × d parameters</text>
+<text x="762" y="99" font-size="12.5" fill="#9198a1">(4 × 768 = 3,072 for ViT-B)</text>
+<text x="762" y="120" font-size="12.5" fill="#9198a1">K = 0 → stock model</text>
+<text x="762" y="141" font-size="12.5" fill="#9198a1">heads, text tower: untouched</text>
+</svg>

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Datasets (COCO images + LVIS annotations are downloaded separately)
+train2017/
+val2017/
+test2017/
+lvis/
+coco_dataset/
+
+# Checkpoints and model weights
+checkpoints/
+checkpoint_small/
+converted_owlv2_large_checkpoint/
+froken_backbone_reg/
+owlvit_registers_lvis_finetuned/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Run outputs
+wandb/
+debug_outputs/
+attention_maps_output_*/
+out_json_eval.json
+coco_owlv2_results*.json
+owlv2_lvis_detections_*.json
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
